@@ -566,18 +566,18 @@ namespace PaintIn3D
 			}
 		}
 
-		protected override void OnEnable()
-		{
-			base.OnEnable();
+        protected override void OnEnable()
+        {
+            base.OnEnable();
 
-			if (paintableSet == false)
-			{
-				paintable    = GetComponent<P3dPaintable>();
-				paintableSet = true;
-			}
+            if (true || paintableSet == false)
+            {
+                paintable = GetComponent<P3dPaintable>();
+                paintableSet = true;
+            }
 
-			paintable.Register(this);
-		}
+            paintable.Register(this);
+        }
 
 		protected override void OnDisable()
 		{

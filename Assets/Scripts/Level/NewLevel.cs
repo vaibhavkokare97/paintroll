@@ -53,7 +53,6 @@ public class NewLevel : MonoBehaviour
 
         //}
         lc[LevelProgressFillArea.InfiniteLevelAlgo(PlayerPrefs.GetInt("level"))].platform.SetActive(true);
-       
     }
 
     public void NewLevelButton()

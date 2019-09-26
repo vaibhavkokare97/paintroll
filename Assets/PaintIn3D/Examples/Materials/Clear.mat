@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Clear
   m_Shader: {fileID: 4800000, guid: 6fbf037308d24cc408f567c3b4f13db9, type: 3}
   m_ShaderKeywords: P3D_A _ALPHATEST_ON

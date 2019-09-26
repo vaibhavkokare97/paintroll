@@ -20,12 +20,13 @@ public class LevelProgressFillArea : MonoBehaviour
 
     private void Start()
     {
-        levelValue = PlayerPrefs.GetInt("level");
+        levelValue = PlayerPrefs.GetInt("level"); //get level value
         _percentageValue = newLevel.lc[InfiniteLevelAlgo(levelValue)].percentageComplete;
         Invoke("AttachFeatureImage", 2f);
         LevelNumbers();
     }
 
+    // repeats level
     public static int InfiniteLevelAlgo(int level)
     {
         int i = level % 10;
@@ -45,6 +46,7 @@ public class LevelProgressFillArea : MonoBehaviour
         //}
     }
 
+    // assign feature image
     void AttachFeatureImage()
     {
         featureImage.GetComponent<RawImage>().texture = platformList.GetComponentInChildren<PaintIn3D.P3dPaintableTexture>().Texture;
@@ -52,16 +54,18 @@ public class LevelProgressFillArea : MonoBehaviour
 
     private void LateUpdate()
     {
+        // virtual 100percent
         GetComponent<Slider>().value = Fill.cachedImage.fillAmount * 100/_percentageValue;
         if (GetComponent<Slider>().value >= 1 && !isEnd)
         {
             isEnd = true;
-            starValue = 3;
+            starValue = 3; // if level ends by 100percent completition, give 3 stars
             OldPlayerPrefCheck();
             NewLevel.LoadGameOverScreen();
-            AnimateEndScreen();
+            //AnimateEndScreen();
         }
 
+        // enable next level button on 95percent completion
         if (GetComponent<Slider>().value > 0.95 && !pushed95)
         {
             pushed95 = true;
@@ -87,6 +91,8 @@ public class LevelProgressFillArea : MonoBehaviour
             stars[2].color = new Color(1, 1, 1, 0.2f);
             stars[1].color = new Color(1, 1, 1, 0.2f);
         }
+
+        // check old values before setting playerprefs
         OldPlayerPrefCheck();
     }
 
@@ -109,12 +115,13 @@ public class LevelProgressFillArea : MonoBehaviour
     {
         StarValueCheck();
         NewLevel.LoadGameOverScreen();
-        AnimateEndScreen();
+        //AnimateEndScreen();
     }
 
     void AnimateEndScreen()
     {
-        //StartCoroutine(ImageStampAnimation());
+        // Using Coroutine For End Screen Animation
+        StartCoroutine(ImageStampAnimation());
     }
 
     public IEnumerator ImageStampAnimation()
@@ -125,8 +132,10 @@ public class LevelProgressFillArea : MonoBehaviour
             featureImage.GetComponent<RectTransform>().localScale -= Vector3.one * Time.deltaTime * 5f;
             yield return null;
         }
+        // vibrate
         Taptic.tapticOn = true;
         Taptic.Success();
+
         yield return null;
     }
 
