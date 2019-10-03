@@ -10,7 +10,7 @@ public class DataInit : MonoBehaviour
 
     private void Start()
     {
-        LoadCached();
+        //LoadCached();
     }
 
     private void LoadCached()

@@ -1,23 +1,15 @@
 ﻿using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
 using System.Collections.Generic;
-
-[Serializable]
-public class LevelClass
-{
-    public string name;
-    public GameObject platform;
-    public int percentageComplete;
-    public Vector2 ImageSizeRange; // x : FROM, y : TO
-}
 
 public class NewLevel : MonoBehaviour
 {
+    public GameObject Celebration;
     public GameObject DrawingCanvas;
     public GameObject Fill;
-    public static GameObject GameCompletePanel;
+    public GameObject PaintGO;
+    public GameObject GameCompletePanel;
     public Button newLevelButton;
 
     public List<LevelClass> lc = new List<LevelClass>();
@@ -26,57 +18,37 @@ public class NewLevel : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("level"))
         {
-            ApplyImage();
+            LoadDistictLevel();
         }
-        else //2
+        else
         {
             PlayerPrefs.SetInt("level", 0);
-            ApplyImage();
+            LoadDistictLevel();
         }
 
         Debug.Log("level start: " + (PlayerPrefs.GetInt("level") + 1).ToString());
         newLevelButton.onClick.AddListener(NewLevelButton);
-        GameCompletePanel = GameObject.Find("GameComplete");
+
         GameCompletePanel.SetActive(false);
+        Celebration.SetActive(false);
     }
 
-    void ApplyImage()
+    void LoadDistictLevel()
     {
-        //DrawingCanvas.GetComponent<PaintIn3D.P3dPaintableTexture>().Texture = levels[PlayerPrefs.GetInt("level")];
-
-        //try
-        //{
-        //    lc[PlayerPrefs.GetInt("level") - 1].platform.SetActive(false);
-        //}
-        //catch (System.Exception)
-        //{
-
-        //}
-        lc[LevelProgressFillArea.InfiniteLevelAlgo(PlayerPrefs.GetInt("level"))].platform.SetActive(true);
+        lc[LevelProgressFillArea.InfiniteLevelAlgo(PlayerPrefs.GetInt("level"), 13)].platform.SetActive(true);
     }
 
     public void NewLevelButton()
     {
         PlayerPrefs.SetInt("level", PlayerPrefs.GetInt("level") + 1);
-        //if (PlayerPrefs.GetInt("level") <= 9)
-        //{
-        //    SceneManager.LoadScene("Game");
-        //}
-        //else
-        //{
-        //    SceneManager.LoadScene("MainScreen");
-        //}
-
         SceneManager.LoadScene("Game");
-
     }
 
-    public static void LoadGameOverScreen()
+    public void LoadGameOverScreen()
     {
         GameCompletePanel.SetActive(true);
-        Transform camTransform = Camera.main.gameObject.transform;
-        camTransform.position = new Vector3(100, -2, -1);
-        camTransform.rotation = Quaternion.identity;
+        Celebration.SetActive(true);
+        PaintGO.GetComponent<PaintIn3D.P3dPaintSphere>().Radius = 20;
         Debug.Log("level complete: " + (PlayerPrefs.GetInt("level") + 1).ToString());
     }
 
@@ -84,8 +56,7 @@ public class NewLevel : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            //SceneManager.LoadScene("MainScreen"); //1
-            Application.Quit(); //2
+            Application.Quit();
         }
     }
 }

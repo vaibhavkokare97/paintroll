@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
 
-public class PlatformController : MonoBehaviour
+public class PlatformController : MonoBehaviour, IController<Vector3>
 {
     public Camera cam;
     Vector3 initialPos, finalPos;
     public float magnitude;
-    public float limitAngle = 10f;
+    public float limitAngle;
     bool mouseUp = true;
 
-    Quaternion rotationMax;
-    Quaternion rotationMin;
+    Quaternion rotationMax, rotationMin;
 
     private void Start()
     {
@@ -17,7 +16,7 @@ public class PlatformController : MonoBehaviour
         rotationMax = Quaternion.Euler(new Vector3(limitAngle, 0f, limitAngle));
     }
 
-    private void Update()
+    void FixedUpdate()
     {
         if (Input.GetMouseButtonUp(0))
         {
@@ -27,18 +26,18 @@ public class PlatformController : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             initialPos = Input.mousePosition;
-            if(mouseUp)
+            if (mouseUp)
             {
                 finalPos = Input.mousePosition;
                 mouseUp = false;
             }
             Vector3 delta = finalPos - initialPos;
-            MovePlatform(delta);
+            Control(delta);
             finalPos = Input.mousePosition;
         }
     }
 
-    void MovePlatform(Vector3 delta)
+    public void Control(Vector3 delta)
     {
         transform.Rotate(0, 0, magnitude * delta.x, Space.Self);
         transform.Rotate(-delta.y * magnitude, 0, 0, Space.World);
