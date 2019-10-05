@@ -644,7 +644,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLWasmStreaming: 0
   scriptingDefineSymbols:
-    7: 
+    7: JELLY
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}

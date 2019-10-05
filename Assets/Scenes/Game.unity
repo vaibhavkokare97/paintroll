@@ -8236,7 +8236,7 @@ MonoBehaviour:
   normal: 0
   offset: 0
   interval: 0.02
-  pressure: 0.049
+  pressure: 1
   preview: 0
   point: {fileID: 0}
   line: {fileID: 0}
