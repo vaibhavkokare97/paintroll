@@ -156,8 +156,10 @@
      <Compile Include="Assets\Scripts\DataStartLoader\DataInit.cs" />
      <Compile Include="Assets\Scripts\Level\LevelClass.cs" />
      <Compile Include="Assets\Scripts\Level\NewLevel.cs" />
+     <Compile Include="Assets\Scripts\Manager\SoundManager.cs" />
      <Compile Include="Assets\Scripts\Movement\ForceController.cs" />
      <Compile Include="Assets\Scripts\Movement\IController.cs" />
+     <Compile Include="Assets\Scripts\Movement\JellyController.cs" />
      <Compile Include="Assets\Scripts\Movement\ParticleController.cs" />
      <Compile Include="Assets\Scripts\Movement\PlatformController.cs" />
      <Compile Include="Assets\Scripts\UI\LevelProgressFillArea.cs" />
@@ -194,7 +196,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
-     <None Include="Assets\Graphics\InvisibleMask.shader" />
+     <None Include="Assets\Shader\InvisibleMask.shader" />
      <None Include="Assets\PaintIn3D\Examples\Shaders\P3D Opaque.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

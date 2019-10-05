@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ForceController
+    - JellyController
     - LevelProgressFillArea
     - NewLevel
     - PaintIn3D.Examples.P3dChannelCounter
@@ -14,6 +15,7 @@ ScriptsOnlyBuild:
     - PaintIn3D.P3dPaintableTexture
     - ParticleController
     - PlatformController
+    - SoundManager
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -81,6 +83,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 90
@@ -106,67 +112,71 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9886}
     - Class: 114
-      Script: {instanceID: 9956}
+      Script: {instanceID: 9888}
     - Class: 114
-      Script: {instanceID: 9988}
+      Script: {instanceID: 9900}
     - Class: 114
-      Script: {instanceID: 10000}
+      Script: {instanceID: 9960}
     - Class: 114
-      Script: {instanceID: 10226}
+      Script: {instanceID: 9992}
     - Class: 114
-      Script: {instanceID: 10290}
+      Script: {instanceID: 10004}
     - Class: 114
-      Script: {instanceID: 10532}
+      Script: {instanceID: 10232}
     - Class: 114
-      Script: {instanceID: 10562}
+      Script: {instanceID: 10296}
+    - Class: 114
+      Script: {instanceID: 10540}
     - Class: 114
       Script: {instanceID: 10570}
     - Class: 114
-      Script: {instanceID: 10626}
+      Script: {instanceID: 10578}
     - Class: 114
-      Script: {instanceID: 10644}
+      Script: {instanceID: 10634}
     - Class: 114
-      Script: {instanceID: 10688}
+      Script: {instanceID: 10652}
     - Class: 114
-      Script: {instanceID: 10940}
+      Script: {instanceID: 10696}
     - Class: 114
-      Script: {instanceID: 10968}
+      Script: {instanceID: 10948}
     - Class: 114
-      Script: {instanceID: 11002}
+      Script: {instanceID: 10976}
     - Class: 114
-      Script: {instanceID: 11076}
+      Script: {instanceID: 11010}
     - Class: 114
-      Script: {instanceID: 11102}
+      Script: {instanceID: 11084}
     - Class: 114
-      Script: {instanceID: 11148}
+      Script: {instanceID: 11110}
     - Class: 114
-      Script: {instanceID: 11316}
+      Script: {instanceID: 11156}
     - Class: 114
-      Script: {instanceID: 11350}
+      Script: {instanceID: 11324}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11358}
     - Class: 114
-      Script: {instanceID: 11494}
+      Script: {instanceID: 11376}
     - Class: 114
-      Script: {instanceID: 11610}
+      Script: {instanceID: 11502}
     - Class: 114
-      Script: {instanceID: 11632}
+      Script: {instanceID: 11618}
     - Class: 114
-      Script: {instanceID: 11694}
+      Script: {instanceID: 11640}
     - Class: 114
-      Script: {instanceID: 11912}
+      Script: {instanceID: 11702}
     - Class: 114
-      Script: {instanceID: 11966}
+      Script: {instanceID: 11920}
     - Class: 114
-      Script: {instanceID: 12054}
+      Script: {instanceID: 11974}
     - Class: 114
-      Script: {instanceID: 12110}
+      Script: {instanceID: 12062}
     - Class: 114
-      Script: {instanceID: 12192}
+      Script: {instanceID: 12118}
     - Class: 114
-      Script: {instanceID: 12234}
+      Script: {instanceID: 12200}
     - Class: 114
-      Script: {instanceID: 17310}
+      Script: {instanceID: 12242}
+    - Class: 114
+      Script: {instanceID: 12292}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 134
@@ -174,6 +184,8 @@ ScriptsOnlyBuild:
     - Class: 135
       Script: {instanceID: 0}
     - Class: 136
+      Script: {instanceID: 0}
+    - Class: 137
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -244,10 +256,22 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: c19fb17162f1468492c24a20ea93f794
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ParticleController
+  - hash:
+      serializedVersion: 2
       Hash: 04e4a8b0447477cc4e933d9e5311188f
     assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
     namespaceName: UnityEngine.XR.LegacyInputHelpers
     className: ArmModel
+  - hash:
+      serializedVersion: 2
+      Hash: eabaacd610ff4e9a8e0c9ffd57b3d223
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundManager
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -988,7 +1012,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 416528b13038c8da44dd974bc8f5793c
+      Hash: 26987b42fc42b2988e403fe364223e66
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NewLevel
@@ -1327,8 +1351,8 @@ ScriptsOnlyBuild:
       Hash: c19fb17162f1468492c24a20ea93f794
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ParticleController
+    className: JellyController
   platform: 13
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/compname/Desktop/painter_stareout.apk
+  playerPath: C:/Users/compname/Desktop/painter_stareout_phy.apk
