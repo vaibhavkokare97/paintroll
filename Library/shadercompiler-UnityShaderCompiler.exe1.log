@@ -1,4 +1,2 @@
-Base path: 'C:/Program Files/Unity/Hub/Editor/2019.2.0f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.2.0f1/Editor/Data/PlaybackEngines'
+Base path: 'D:/here here/Unity/2019.2.8f1/Editor/Data', plugins path 'D:/here here/Unity/2019.2.8f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
-Cmd: compileSnippet
-  api=4 type=0 insize=1596 outsize=2314 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _EMISSION _ALPHAPREMULTIPLY_ON _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A pd=UNITY_NO_DXT5nm UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_CUBEMAP_ARRAY UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 UNITY_NO_FULL_STANDARD_SHADER SHADER_API_DESKTOP UNITY_LIGHTMAP_DLDR_ENCODING ok=1

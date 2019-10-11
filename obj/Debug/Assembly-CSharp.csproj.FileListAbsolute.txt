@@ -295,3 +295,6 @@ D:\Unity Projects MSI\Stareout - Paint\obj\Debug\Assembly-CSharp.csproj.CopyComp
 D:\Unity Projects MSI\Stareout - Paint\obj\Debug\Assembly-CSharp.dll
 D:\Unity Projects MSI\Stareout - Paint\obj\Debug\Assembly-CSharp.pdb
 D:\Unity Projects MSI\Stareout - Paint\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\Unity Projects MSI\Stareout - Paint\Temp\bin\Debug\UnityEditor.iOS.Extensions.Common.dll
+D:\Unity Projects MSI\Stareout - Paint\Temp\bin\Debug\UnityEditor.iOS.Extensions.Xcode.dll
+D:\Unity Projects MSI\Stareout - Paint\Temp\bin\Debug\Mono.Posix.dll

@@ -18,22 +18,24 @@ public class PlatformController : MonoBehaviour, IController<Vector3>
 
     void FixedUpdate()
     {
-        if (Input.GetMouseButtonUp(0))
-        {
-            mouseUp = true;
-        }
-
-        if (Input.GetMouseButton(0))
-        {
-            initialPos = Input.mousePosition;
-            if (mouseUp)
+        if (Input.touchCount <= 1) {
+            if (Input.GetMouseButtonUp(0))
             {
-                finalPos = Input.mousePosition;
-                mouseUp = false;
+                mouseUp = true;
             }
-            Vector3 delta = finalPos - initialPos;
-            Control(delta);
-            finalPos = Input.mousePosition;
+
+            if (Input.GetMouseButton(0))
+            {
+                initialPos = Input.mousePosition;
+                if (mouseUp)
+                {
+                    finalPos = Input.mousePosition;
+                    mouseUp = false;
+                }
+                Vector3 delta = finalPos - initialPos;
+                Control(delta);
+                finalPos = Input.mousePosition;
+            }
         }
     }
 

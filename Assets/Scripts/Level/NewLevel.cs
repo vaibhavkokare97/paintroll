@@ -53,7 +53,7 @@ public class NewLevel : MonoBehaviour
     void ChangeBallColor()
     {
 #if JELLY
-        physicsBall.GetComponent<MeshRenderer>().enabled = false;
+        physicsBall.GetComponent<MeshRenderer>().material.color = lc[LevelProgressFillArea.InfiniteLevelAlgo(PlayerPrefs.GetInt("level"), 13)].ballColor;
         jellyBall.GetComponent<SkinnedMeshRenderer>().material.color = lc[LevelProgressFillArea.InfiniteLevelAlgo(PlayerPrefs.GetInt("level"), 13)].ballColor;
 #else
         jellyBall.SetActive(false);
