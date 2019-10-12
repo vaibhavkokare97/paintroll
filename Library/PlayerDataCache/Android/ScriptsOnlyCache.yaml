@@ -48,7 +48,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Outline
     - UnityEngine.UI.RawImage
     - UnityEngine.UI.Slider
-    - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
     com.unity.multiplayer-hlapi.Runtime.dll:
     - UnityEngine.Networking.NetworkCallbacks
     - UnityEngine.Networking.NetworkIdentity
@@ -117,8 +117,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9920}
     - Class: 114
-      Script: {instanceID: 9968}
-    - Class: 114
       Script: {instanceID: 9980}
     - Class: 114
       Script: {instanceID: 10012}
@@ -177,12 +175,12 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12222}
     - Class: 114
+      Script: {instanceID: 12240}
+    - Class: 114
       Script: {instanceID: 12264}
     - Class: 114
       Script: {instanceID: 12316}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
       Script: {instanceID: 0}
     - Class: 134
       Script: {instanceID: 0}
@@ -273,7 +271,7 @@ ScriptsOnlyBuild:
     className: ArmModel
   - hash:
       serializedVersion: 2
-      Hash: eabaacd610ff4e9a8e0c9ffd57b3d223
+      Hash: 4ce99424e03378d23d84e36c55a8adba
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SoundManager
@@ -1353,11 +1351,11 @@ ScriptsOnlyBuild:
     className: P3dModifyColorRandom
   - hash:
       serializedVersion: 2
-      Hash: 39bd06264f03926e2008eeb25dd391ef
+      Hash: 3f3b31fde9b15016c13c8819fbe2a042
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: JellyController
   platform: 13
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/compname/Desktop/painter_stareout_jellyTapticTrail.apk
+  playerPath: C:/Users/compname/Desktop/painter_stareout_jellyFinal.apk

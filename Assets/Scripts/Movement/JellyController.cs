@@ -4,21 +4,26 @@ using UnityEngine.UI;
 
 public class JellyController : MonoBehaviour, IController<Rigidbody>
 {
-    float timer = 0;
+    //float timer = 0;
     public Transform copyTransformPosition;
     SkinnedMeshRenderer smr;
     Rigidbody rbody;
+    public Toggle vibrationToggle;
 
     void Start()
     {
         smr = gameObject.GetComponent<SkinnedMeshRenderer>();
         rbody = copyTransformPosition.gameObject.GetComponent<Rigidbody>();
+        if (PlayerPrefs.HasKey("vibration"))
+        {
+            vibrationToggle.isOn = PlayerPrefs.GetInt("vibration") == 1 ? true : false;
+        }
     }
 
     void LateUpdate()
     {
         Control(rbody);
-        timer += Time.deltaTime;
+        //timer += Time.deltaTime;
     }
     
     public void Control(Rigidbody rbody)
@@ -29,13 +34,13 @@ public class JellyController : MonoBehaviour, IController<Rigidbody>
         smr.SetBlendShapeWeight(0, 100f * Mathf.Abs(Mathf.Sin(Time.time)));
     }
 
-    float n;
     public void OnChangeSlider()
     {
-        if (timer - n > 0.1f) //problem
-        {
-            Taptic.Selection();
-            n = timer;
-        }
+        if (vibrationToggle.isOn) { Taptic.Selection();}
+    }
+
+    public void OnVibrationToggle()
+    {
+        PlayerPrefs.SetInt("vibration", vibrationToggle.isOn ? 1 : 0);
     }
 }
