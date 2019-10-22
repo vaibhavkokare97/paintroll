@@ -14,7 +14,7 @@ public class LevelProgressFillArea : MonoBehaviour
     private void Start()
     {
         levelValue = PlayerPrefs.GetInt("level"); //get level value
-        _percentageValue = newLevel.lc[InfiniteLevelAlgo(levelValue, 13)].percentageComplete;
+        _percentageValue = newLevel.lc[InfiniteLevelAlgo(levelValue, 10)].percentageComplete;
         LevelNumbers();
     }
 

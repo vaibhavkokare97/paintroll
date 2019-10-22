@@ -83,7 +83,7 @@ namespace PaintIn3D
 		{
 			if (pointA != null && pointB != null)
 			{
-				var vector      = pointB.position - pointA.position;
+				var vector      = (pointB.position - pointA.position)*2f;
 				var maxDistance = vector.magnitude;
 				var ray         = new Ray(ball.transform.position, vector);
 				var hit         = default(RaycastHit);

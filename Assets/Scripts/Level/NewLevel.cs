@@ -11,10 +11,10 @@ public class NewLevel : MonoBehaviour
     public GameObject Fill;
     public GameObject PaintGO;
     public GameObject GameCompletePanel;
+    public RawImage[] borders;
     public Button newLevelButton;
     //public GameObject background;
-    public GameObject skybox;
-    public GameObject physicsBall, jellyBall;
+    public GameObject physicsBall, jellyBall, Brush;
     public List<LevelClass> lc = new List<LevelClass>();
 
     private void OnEnable()
@@ -41,23 +41,29 @@ public class NewLevel : MonoBehaviour
 
     void LoadDistictLevel()
     {
-        lc[LevelProgressFillArea.InfiniteLevelAlgo(PlayerPrefs.GetInt("level"), 13)].platform.SetActive(true);
+        lc[LevelProgressFillArea.InfiniteLevelAlgo(PlayerPrefs.GetInt("level"), 10)].platform.SetActive(true);
     }
 
-    void ChangeBackgroundColor()
+    void ChangeBackgroundColor() //border color
     {
-        skybox.GetComponent<MeshRenderer>().material.SetColor("_Color1", lc[LevelProgressFillArea.InfiniteLevelAlgo(PlayerPrefs.GetInt("level"), 13)].skyboxIn);
-        skybox.GetComponent<MeshRenderer>().material.SetColor("_Color2", lc[LevelProgressFillArea.InfiniteLevelAlgo(PlayerPrefs.GetInt("level"), 13)].skyboxOut);
+        for (int i = 0; i < 4; i++) //4 borders
+        {
+            borders[i].color = lc[LevelProgressFillArea.InfiniteLevelAlgo(PlayerPrefs.GetInt("level"), 10)].borderColor;
+        }
     }
 
     void ChangeBallColor()
     {
 #if JELLY
-        physicsBall.GetComponent<MeshRenderer>().material.color = lc[LevelProgressFillArea.InfiniteLevelAlgo(PlayerPrefs.GetInt("level"), 13)].ballColor;
-        jellyBall.GetComponent<SkinnedMeshRenderer>().material.color = lc[LevelProgressFillArea.InfiniteLevelAlgo(PlayerPrefs.GetInt("level"), 13)].ballColor;
+        physicsBall.GetComponent<MeshRenderer>().material.color = lc[LevelProgressFillArea.InfiniteLevelAlgo(PlayerPrefs.GetInt("level"), 10)].ballColor;
+        jellyBall.GetComponent<SkinnedMeshRenderer>().material.color = lc[LevelProgressFillArea.InfiniteLevelAlgo(PlayerPrefs.GetInt("level"), 10)].ballColor;
+#elif BRUSH
+        Brush.SetActive(true);
+        jellyBall.GetComponent<SkinnedMeshRenderer>().enabled = false;
+        physicsBall.GetComponent<MeshRenderer>().enabled = false;
 #else
-        jellyBall.SetActive(false);
-        physicsBall.GetComponent<MeshRenderer>().material.color = lc[LevelProgressFillArea.InfiniteLevelAlgo(PlayerPrefs.GetInt("level"), 13)].ballColor;
+        jellyBall.GetComponent<SkinnedMeshRenderer>().enabled = false;
+        physicsBall.GetComponent<MeshRenderer>().material.color = lc[LevelProgressFillArea.InfiniteLevelAlgo(PlayerPrefs.GetInt("level"), 10)].ballColor;
 #endif
     }
 

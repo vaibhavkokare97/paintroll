@@ -44,6 +44,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.Outline
     - UnityEngine.UI.RawImage
@@ -153,6 +154,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11344}
     - Class: 114
+      Script: {instanceID: 11374}
+    - Class: 114
       Script: {instanceID: 11378}
     - Class: 114
       Script: {instanceID: 11396}
@@ -259,7 +262,7 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: c19fb17162f1468492c24a20ea93f794
+      Hash: 2ab160d3682e7cbe44fbab255015eb33
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ParticleController
@@ -1015,7 +1018,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 26987b42fc42b2988e403fe364223e66
+      Hash: 2ffec4394e4c689af52e3f9159e6ba04
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NewLevel
@@ -1358,4 +1361,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/compname/Desktop/painter_stareout_jellyFinal.apk
+  playerPath: C:/Users/compname/Desktop/painter_stareout_brush.apk

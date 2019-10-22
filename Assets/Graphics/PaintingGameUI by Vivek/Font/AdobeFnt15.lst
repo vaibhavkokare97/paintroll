@@ -1,0 +1,24 @@
+%!Adobe-FontList 1.15
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Swiss721BT-Black
+FamilyName:Swis721 Blk BT
+StyleName:Black
+FullName:Swiss 721 Black BT
+MenuName:Swis721 Blk BT
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\vivek\Desktop\PaintingGame\Font\swz721k.ttf
+DataFormat:sfntData
+FileLength:36460
+FileModTime:1474062298
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Swiss 721 Black BT
+NameArray:0,Win,1,Swis721 Blk BT
+%EndFont
+
