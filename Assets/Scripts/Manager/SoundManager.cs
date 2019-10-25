@@ -5,7 +5,6 @@ public class SoundManager : MonoBehaviour
 {
     public AudioSource Sound;
     public AudioClip celebrationClip;
-    public Rigidbody rbody;
     bool oneTime = true;
     public Toggle soundToggle;
 
@@ -15,6 +14,11 @@ public class SoundManager : MonoBehaviour
         {
             Sound.mute = PlayerPrefs.GetInt("sound") == 0 ? true : false;
             soundToggle.isOn = !Sound.mute;
+        }
+
+        if (PlayerPrefs.HasKey("vibration"))
+        {
+            vibrationToggle.isOn = PlayerPrefs.GetInt("vibration") == 1 ? true : false;
         }
     }
 
@@ -33,10 +37,6 @@ public class SoundManager : MonoBehaviour
     {
         if (oneTime)
         {
-#if JELLY
-            Sound.volume = rbody.velocity.magnitude / 14f;
-#endif 
-
             if (NewLevel.GameOver)
             {
                 oneTime = false;
@@ -46,5 +46,17 @@ public class SoundManager : MonoBehaviour
                 Sound.Play();
             }
         }
+    }
+
+    public Toggle vibrationToggle;
+
+    public void OnChangeSlider()
+    {
+        if (vibrationToggle.isOn) { Taptic.Selection(); }
+    }
+
+    public void OnVibrationToggle()
+    {
+        PlayerPrefs.SetInt("vibration", vibrationToggle.isOn ? 1 : 0);
     }
 }

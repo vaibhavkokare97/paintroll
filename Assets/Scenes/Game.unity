@@ -5970,8 +5970,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sound: {fileID: 850498119}
   celebrationClip: {fileID: 8300000, guid: 7ab972789937e3d4a98fa037df7c727d, type: 3}
-  rbody: {fileID: 1745866605}
   soundToggle: {fileID: 510528715}
+  vibrationToggle: {fileID: 2037658376}
 --- !u!1 &874591753
 GameObject:
   m_ObjectHideFlags: 0
@@ -9809,7 +9809,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 850498121}
         m_MethodName: OnChangeSlider
         m_Mode: 1
         m_Arguments:
@@ -15165,7 +15165,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 850498121}
         m_MethodName: OnVibrationToggle
         m_Mode: 1
         m_Arguments:

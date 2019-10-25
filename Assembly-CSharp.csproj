@@ -159,7 +159,6 @@
      <Compile Include="Assets\Scripts\Manager\SoundManager.cs" />
      <Compile Include="Assets\Scripts\Movement\ForceController.cs" />
      <Compile Include="Assets\Scripts\Movement\IController.cs" />
-     <Compile Include="Assets\Scripts\Movement\JellyController.cs" />
      <Compile Include="Assets\Scripts\Movement\ParticleController.cs" />
      <Compile Include="Assets\Scripts\Movement\PlatformController.cs" />
      <Compile Include="Assets\Scripts\UI\LevelProgressFillArea.cs" />
