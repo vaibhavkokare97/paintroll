@@ -18,7 +18,6 @@ public class ParticleController : MonoBehaviour, IController
         if (towards && copyTransformPosition.gameObject.GetComponent<Rigidbody>().velocity.magnitude > 2f)
         {
             transform.forward = Vector3.Lerp(transform.forward, Quaternion.AngleAxis(30, transform.right) * copyTransformPosition.gameObject.GetComponent<Rigidbody>().velocity.normalized, Time.deltaTime * lerpVal);
-            //transform.up = Quaternion.AngleAxis(-30, Vector3.right) * (copyTransformPosition.position - this.gameObject.transform.position);
         }
     }
 }

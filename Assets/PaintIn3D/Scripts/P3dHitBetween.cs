@@ -71,19 +71,16 @@ namespace PaintIn3D
 		[System.NonSerialized]
 		private float current;
 
-        GameObject ball;
+        public GameObject Ball { set { ball = value; } get { return ball; } }
+        [SerializeField] private GameObject ball;
 
         [ContextMenu("Raycast Now")]
-        private void Start()
-        {
-            ball = GameObject.FindGameObjectWithTag("Player");
-        }
 
         public void RaycastNow()
 		{
 			if (pointA != null && pointB != null)
 			{
-				var vector      = (pointB.position - pointA.position)*2f;
+				var vector      = (pointB.position - pointA.position)*4f;
 				var maxDistance = vector.magnitude;
 				var ray         = new Ray(ball.transform.position, vector);
 				var hit         = default(RaycastHit);
@@ -174,7 +171,10 @@ namespace PaintIn3D
 			BeginError(Any(t => t.PointB == null));
 				Draw("pointB", "The end point of the raycast.");
 			EndError();
-			BeginError(Any(t => t.Layers == 0));
+            BeginError(Any(t => t.Ball == null));
+            Draw("ball", "ball gameobject");
+            EndError();
+            BeginError(Any(t => t.Layers == 0));
 				Draw("layers", "The layers you want the raycast to hit.");
 			EndError();
 			Draw("orientation", "How should the hit point be oriented?\nNone = It will be treated as a point with no rotation.\nWorldUp = It will be rotated to the normal, where the up vector is world up.\nCameraUp = It will be rotated to the normal, where the up vector is world up.");

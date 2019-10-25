@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class JellyController : MonoBehaviour, IController<Rigidbody>
 {
-    //float timer = 0;
     public Transform copyTransformPosition;
     SkinnedMeshRenderer smr;
     Rigidbody rbody;
@@ -23,7 +22,6 @@ public class JellyController : MonoBehaviour, IController<Rigidbody>
     void LateUpdate()
     {
         Control(rbody);
-        //timer += Time.deltaTime;
     }
     
     public void Control(Rigidbody rbody)

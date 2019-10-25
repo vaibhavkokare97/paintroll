@@ -550,7 +550,7 @@ ScriptsOnlyBuild:
     className: TMP_TextEventCheck
   - hash:
       serializedVersion: 2
-      Hash: 4bbc8556cdd349afead4419323d2fbbc
+      Hash: 1e56b1194b47f9cdcfb297f6eefe350f
     assemblyName: Assembly-CSharp.dll
     namespaceName: PaintIn3D
     className: P3dHitBetween
@@ -1361,4 +1361,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/compname/Desktop/painter_stareout_brush.apk
+  playerPath: C:/Users/compname/Desktop/painter_stareout_4balls.apk
